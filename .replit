@@ -1,5 +1,11 @@
-run = "cowsay Configure me!"
-entrypoint = "README.md"
+run = "npm run start"
+hidden = [".config", "package-lock.json"]
+compile = "npm run build"
 
 [nix]
-channel = "stable-24_05"
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "npm run start"]
+deploymentTarget = "static"
+publicDir = "dist"
