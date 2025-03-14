@@ -11,3 +11,8 @@ run = ["sh", "-c", "npm run start"]
 deploymentTarget = "static"
 buildCommand = "npm run build"
 publicDir = "dist"
+
+[[ports]]
+localPort = 3002
+externalPort = 80
+exposeLocalhost = true
