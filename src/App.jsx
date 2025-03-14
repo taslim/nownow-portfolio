@@ -28,7 +28,7 @@ const App = () => {
               <div className="flex items-center gap-3 mb-1">
                 <a 
                   href={project.live}
-                  className="text-lg hover:text-rose-700 hover:underline transition-colors"
+                  className="text-rose-700 text-lg hover:underline transition-colors"
                 >
                   {project.title}
                 </a>

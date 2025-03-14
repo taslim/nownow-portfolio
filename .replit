@@ -1,6 +1,7 @@
 run = "npm run start"
 hidden = [".config", "package-lock.json"]
 compile = "npm run build"
+modules = ["nodejs-20"]
 
 [nix]
 channel = "stable-22_11"
