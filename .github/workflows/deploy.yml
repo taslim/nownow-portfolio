@@ -1,0 +1,21 @@
+name: Deploy to Replit
+
+on:
+  push:
+    branches:
+      - main  # Triggers only when pushing to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Deploy to Replit
+      env:
+        REPLIT_API_KEY: ${{ secrets.REPLIT_API_KEY }}
+      run: |
+        curl -X POST "https://replit.com/@taslimo/nownow-porfolio/deploy" \
+        -H "Authorization: Bearer $REPLIT_API_KEY"
